@@ -3,11 +3,17 @@ puts
 
 players = []
 
-(0..1).each do |i|
-  puts "add player #{i + 1}"
-  players[i] = gets.chomp
-  puts "welcome #{players[i]}"
+def user_validity(username)
+    puts "Enter username"
+    username=gets.chomp()
+    while username.empty?
+        puts "Username required"
+        username=gets.chomp()
+    end
+    username
 end
+p player1 =user_validity("x")
+p player2 =user_validity("y")
 
 layer = [" "," "," "," "," "," "," "," "," "]
  
@@ -17,3 +23,4 @@ puts
 puts "|#{layer[3]}|  |#{layer[4]}|  |#{layer[5]}|"
 puts
 puts "|#{layer[6]}|  |#{layer[7]}|  |#{layer[8]}|"
+
