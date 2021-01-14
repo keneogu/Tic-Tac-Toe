@@ -53,6 +53,9 @@ class Board
       return false
     end
   end
-
+  def move(pos,arr, players)
+    pos = pos.to_i - 1
+    arr[pos] = players.sign 
+  end
 
 end
