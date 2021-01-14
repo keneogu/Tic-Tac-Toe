@@ -57,13 +57,14 @@ while game_on
   end
   if layout.win?
     puts turn ? " \n #{player_x.name} Won! CONGRATULATIONS!!! \n " : " \n #{player_o.name} Won! CONGRATULATIONS!!! \n "
+    puts layout.display_board
     break
   end
   if layout.draw
     puts " \n IT'S A DRAW! Game is over, but you can always return. \n "
+    puts layout.display_board
     break
   end
   turn = !turn
 
 end
-puts layout.display_board
