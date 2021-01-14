@@ -27,3 +27,18 @@ require_relative './board'
     player_o.name = gets.chomp
   end
   puts
+
+  game_on = true
+turn = true
+
+while game_on
+  if turn
+ puts "#{player_x.name} choose a position "
+      puts layout.display_board
+  else
+  puts "#{player_o.name} choose a position "
+      puts layout.display_board
+  end
+
+  
+end
