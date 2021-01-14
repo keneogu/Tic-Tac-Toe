@@ -45,6 +45,14 @@ class Board
        end
     end
   end
+  def valid?(pos)
+    pos = pos.to_i
+    if pos.between?(1,9) && pos.is_a?(Integer)
+      return true
+    else
+      return false
+    end
+  end
 
 
 end
