@@ -28,7 +28,8 @@ require_relative './board'
   end
   puts
 
-  game_on = true
+  #game flow start
+game_on = true
 turn = true
 
 while game_on
@@ -40,5 +41,21 @@ while game_on
       puts layout.display_board
   end
 
+  pos = gets.chomp
+  if layout.valid?(pos)
+    if layout.free?(pos,layout.board) == true
+      if turn
+        layout.move(pos, layout.board, player_x)
+      else
+        layout.move(pos, layout.board, player_o)
+      end
+    elsif layout.free?(pos, layout.board) == false
+      puts "POSITION #{pos} TAKEN! Please, Try again."
+      next
+    end
+  else
+    puts " \n INVALID NUMBER! Please, Try again."
+    next
+  end
   
 end
