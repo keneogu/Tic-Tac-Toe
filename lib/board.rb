@@ -35,6 +35,16 @@ class Board
     [0, 4, 8],
     [2, 4, 6]
   ].freeze
+  
+  def draw
+    board.all? do |letter|
+       if letter == 'X' || letter == 'O'
+        true
+       else
+        false
+       end
+    end
+  end
 
 
 end
