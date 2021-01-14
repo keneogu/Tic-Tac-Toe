@@ -35,27 +35,25 @@ turn = true
 while game_on
   if turn
     puts "#{player_x.name} choose a position "
-    puts layout.display_board
   else
     puts "#{player_o.name} choose a position "
-    puts layout.display_board
   end
+  puts layout.display_board
 
   pos = gets.chomp
+  # rubocop:disable Metrics/BlockNesting
   if layout.valid?(pos)
-    if layout.free?(pos, layout.board) == true
-      if turn
-        layout.move(pos, layout.board, player_x)
-      else
-        layout.move(pos, layout.board, player_o)
-      end
-    elsif layout.free?(pos, layout.board) == false
+    case layout.free?(pos, layout.board)
+    when true
+      turn ? layout.move(pos, layout.board, player_x) : layout.move(pos, layout.board, player_o)
+    when false
       puts "POSITION #{pos} TAKEN! Please, Try again."
       next
     end
   else
     puts " \n INVALID NUMBER! Please, Try again."
     next
+    # rubocop:enable Metrics/BlockNesting
   end
   if layout.win?
     puts turn ? " \n #{player_x.name} Won! CONGRATULATIONS!!! \n " : " \n #{player_o.name} Won! CONGRATULATIONS!!! \n "
@@ -66,5 +64,6 @@ while game_on
     break
   end
   turn = !turn
+
 end
 puts layout.display_board
