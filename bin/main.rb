@@ -1,7 +1,7 @@
 # !/usr/bin/env ruby
 
 require_relative '../lib/player'
-require_relative './board'
+require_relative '../lib/board'
 
 puts 'Welcome to Kene-Rose TIC-TAC-TOE game'
 layout = Board.new
