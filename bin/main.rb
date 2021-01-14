@@ -57,5 +57,9 @@ while game_on
     puts " \n INVALID NUMBER! Please, Try again."
     next
   end
-  
+  if layout.win?
+    puts turn ? " \n #{player_x.name} Won! CONGRATULATIONS!!! \n " : " \n #{player_o.name} Won! CONGRATULATIONS!!! \n "
+    break
+  end
+
 end
