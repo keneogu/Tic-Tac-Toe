@@ -28,7 +28,6 @@ while player_o.name == '' || player_o.name == player_x.name
 end
 puts
 
-# game flow start
 game_on = true
 turn = true
 

@@ -60,26 +60,17 @@ class Board
   def free?(pos, arr)
     pos = pos.to_i - 1
     arr.each_with_index do |num, i|
-      # rubocop: disable Style/GuardClause
-      if i == pos && num == ' '
-        return true
-      elsif i == pos && num != ' '
-        return false
-      end
+      return true if i == pos && num == ' '
+      return false if i == pos && num != ' '
     end
   end
 
   def win?
     WINS.each do |i|
       win_combo = [board[i[0]], board[i[1]], board[i[2]]]
-      if win_combo.all? { |x| x == 'O' }
-        return true
-      elsif win_combo.all? { |x| x == 'X' }
-        return true
-      end
+      return true if win_combo.all? { |x| x == 'O' }
+      return true if win_combo.all? { |x| x == 'X' }
     end
     false
   end
-
-  # rubocop:enable Style/GuardClause
 end
