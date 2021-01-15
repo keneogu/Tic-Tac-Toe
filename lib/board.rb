@@ -7,7 +7,6 @@ class Board
   end
 
   def display_board1
-    puts
     [" #{@board1[0]} | #{@board1[1]} | #{@board1[2]} ",
      '------------',
      " #{@board1[3]} | #{@board1[4]} | #{@board1[5]} ",
@@ -16,7 +15,6 @@ class Board
   end
 
   def display_board
-    puts
     [" #{@board[0]} | #{@board[1]} | #{@board[2]} ",
      '------------',
      " #{@board[3]} | #{@board[4]} | #{@board[5]} ",

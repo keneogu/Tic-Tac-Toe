@@ -5,7 +5,7 @@ require_relative '../lib/board'
 
 puts 'Welcome to Kene-Rose TIC-TAC-TOE game'
 layout = Board.new
-
+puts
 puts layout.display_board1
 puts
 player_x = Player.new('player1', 'X')
@@ -38,6 +38,7 @@ while game_on
   else
     puts "#{player_o.name} choose a position "
   end
+  puts
   puts layout.display_board
 
   pos = gets.chomp
