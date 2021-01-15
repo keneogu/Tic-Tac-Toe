@@ -35,7 +35,7 @@ class Board
 
   def draw
     board.all? do |letter|
-      if %w[X O].include?(letter)
+      if letter == 'X'.red || letter == 'O'.blue
         true
       else
         false
@@ -68,8 +68,8 @@ class Board
   def win?
     WINS.each do |i|
       win_combo = [board[i[0]], board[i[1]], board[i[2]]]
-      return true if win_combo.all? { |x| x == 'O' }
-      return true if win_combo.all? { |x| x == 'X' }
+      return true if win_combo.all? { |x| x == 'O'.blue }
+      return true if win_combo.all? { |x| x == 'X'.red }
     end
     false
   end

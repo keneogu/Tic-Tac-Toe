@@ -2,25 +2,31 @@
 
 require_relative '../lib/player'
 require_relative '../lib/board'
+require 'colorize'
 
 puts 'Welcome to Kene-Rose TIC-TAC-TOE game'
+sleep 1
 layout = Board.new
 puts
+sleep 1
 puts layout.display_board1
 puts
+sleep 1
 player_x = Player.new('player1', 'X')
+player_x.sign = 'X'.red
 puts 'Enter player 1 name'
-player_x.name = gets.chomp
+player_x.name = gets.chomp.red
 puts "welcome #{player_x.name} you're player 1"
 while player_x.name == ''
   puts 'Player name is required'
   player_x.name = gets.chomp
 end
 puts
-
+sleep 1
 player_o = Player.new('player2', 'O')
+player_o.sign = 'O'.blue
 puts 'Enter player 2 name'
-player_o.name = gets.chomp
+player_o.name = gets.chomp.blue
 puts "welcome #{player_o.name} you're player 2"
 while player_o.name == '' || player_o.name == player_x.name
   puts 'Player name is required or invalid name'
@@ -37,6 +43,7 @@ while game_on
   else
     puts "#{player_o.name} choose a position "
   end
+  sleep 1
   puts
   puts layout.display_board
 
