@@ -15,7 +15,7 @@ Ruby
 
 - Ruby
 - Text editor eg. VS Code
-- Git.
+- Git
 - Github profile
 
 ## Getting Started
@@ -30,9 +30,7 @@ To get a local copy up and running follow these simple example steps.​
 3. Run the program
 `ruby bin/main.rb`
 
-4. Start the Game
-
-5. Follow the instructions on how to play section
+4. Follow the instructions on how to play section
 
 ## How to Play
 
