@@ -5,17 +5,18 @@
 
 The game involves two players each assigned a symbol X OR O. If any of the players has all his symbols aligned either horizontally,vertically ,diagnoally or antidiagnolly first then he/she becomes the winner. Otherwise, if the board is full and none of them has won then the game is a draw and thus game over.
 
-![screenshot](https://user-images.githubusercontent.com/53356820/104712392-c88b2980-5722-11eb-9b23-66bd332b769f.png)
+![Tic-tic-toe example](https://user-images.githubusercontent.com/53356820/104712392-c88b2980-5722-11eb-9b23-66bd332b769f.png)
 
-## Buit With
+## Built With
 
 Ruby
 
 ## Prerequisites
 
-Ruby
-Text editor eg. VS Code
-Git.
+- Ruby
+- Text editor eg. VS Code
+- Git.
+- Github profile
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.​
