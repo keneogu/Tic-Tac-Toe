@@ -34,29 +34,27 @@ describe Board do
   end
 
   describe '#win?' do
-    it 'updates board base on the position active player picks' do
+    it 'returns true if a player won' do
       board.board = [' ', ' ', ' ', 'X', 'X', 'X', ' ', ' ', ' ']
       expect(board.win?).to eql(true)
     end
-  end
-  #   describe '#win?' do
-  #     let(:arr2) { ['X', 'X', 'X', ' ', ' ', ' ', ' ', ' ', ' '] }
-  # 	it 'checks if a player won the game' do
-  # 	  expect(board.move(1, arr2, player1))
-  # 	  expect(board.move(2, arr2, player1))
-  # 	  expect(board.move(3, arr2, player1))
-  #       expect(board.win?).to be true
-  #     end
-  #   end
 
-  #   describe '#draw' do
-  #     let(:firstarr) { %w[X O X O O X X O X] }
-  #     it 'checks if its true when th board is full' do
-  #       expect(board.draw(firstarr)).to eql(true)
-  #     end
-  #     let(:secondarr) { ['X', 'O', 'X', ' ', 'O', 'X', 'X', ' ', 'X'] }
-  #     it 'returns false if the board is not full' do
-  #       expect(board.draw(secondarr)).to eql(nil)
-  #     end
-  #   end
+    it 'returns false if the game is still on and no has won yet' do
+      board.board = [' ', ' ', ' ', 'X', 'O', 'X', ' ', ' ', ' ']
+      expect(board.win?).to eql(false)
+    end
+  end
+
+    describe '#draw' do
+	  it 'checks if its true when th board is full' do
+		board.board = ['X', 'O', 'X', 'X', 'O', 'X', 'O', 'X', 'O']
+        expect(board.draw).to eql(true)
+	  end
+	  
+	  it 'returns false if the board is not full' do
+		board.board = [' ', ' ', ' ', 'X', '0', 'X', ' ', ' ', ' ']
+        expect(board.draw).to eql(false)
+      end
+    end
+
 end
