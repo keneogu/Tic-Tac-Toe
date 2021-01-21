@@ -45,16 +45,15 @@ describe Board do
     end
   end
 
-    describe '#draw' do
-	  it 'checks if its true when th board is full' do
-		board.board = ['X', 'O', 'X', 'X', 'O', 'X', 'O', 'X', 'O']
-        expect(board.draw).to eql(true)
-	  end
-	  
-	  it 'returns false if the board is not full' do
-		board.board = [' ', ' ', ' ', 'X', '0', 'X', ' ', ' ', ' ']
-        expect(board.draw).to eql(false)
-      end
+  describe '#draw' do
+    it 'checks if its true when th board is full' do
+      board.board = %w[X O X X O X O X O]
+      expect(board.draw).to eql(true)
     end
 
+    it 'returns false if the board is not full' do
+      board.board = [' ', ' ', ' ', 'X', '0', 'X', ' ', ' ', ' ']
+      expect(board.draw).to eql(false)
+    end
+  end
 end
