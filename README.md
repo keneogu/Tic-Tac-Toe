@@ -41,6 +41,13 @@ To get a local copy up and running follow these simple example steps.​
 5. The game goes until any player can have a sequence of 3 signs (rows,  columns or diagonals) then the player wins the game.
 6. When the board is filled and there is no sequence of 3 signs then it is a draw
 
+## How to Test
+
+1. Install RSpec by typing "gem install rspec" in your terminal.
+2. cd into the project directory.
+3. initiate RSpec using "rspec --init".
+4. run the test using "rspec" command.
+
 ## Authors
 
 👤 **Kenechukwu**
