@@ -5,7 +5,7 @@ describe Player do
   let(:player1) { Player.new('Kene', 'X') }
   let(:player2) { Player.new('Rose', 'O') }
 
-  context '#initialize' do
+  describe '#initialize' do
     it 'creates the player1 name and sign' do
       expect(player1.name).to eq('Kene')
       expect(player1.sign).to eq('X')
